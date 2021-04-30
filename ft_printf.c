@@ -6,7 +6,7 @@
 /*   By: lyie <lyie@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/14 14:21:16 by lyie              #+#    #+#             */
-/*   Updated: 2021/01/15 15:55:52 by lyie             ###   ########.fr       */
+/*   Updated: 2021/04/30 11:51:16 by lyie             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int			ft_redirection(const char *new, va_list args, int *len, int *i)
 		ft_branch(new[marker], va_arg(args, int), tabs, len);
 	if (new[marker] == 'u')
 		*len = *len + ft_putun_args(va_arg(args, unsigned), tabs, 0);
-	if (new[marker] == 'X' | new[marker] == 'x')
+	if (new[marker] == 'X' || new[marker] == 'x')
 		ft_branch(new[marker], va_arg(args, int), tabs, len);
 	if (new[marker] == 'p')
 		*len = *len + ft_putpoint_args((long)va_arg(args, void *), tabs, 0);
